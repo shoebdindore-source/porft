@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoeb Dindore | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #121212;
+            --parchment: #f4f1ea;
+            --accent-gold: #c5a059;
+            --text-gray: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--parchment);
+            font-family: 'EB+Garamond', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Texture Overlay for that "Paper" feel */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Header Section */
+        header {
+            border-bottom: 1px solid var(--parchment);
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: lowercase;
+            font-style: italic;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-item {
+            background: rgba(244, 241, 234, 0.03);
+            padding: 20px;
+            border: 1px solid rgba(244, 241, 234, 0.1);
+        }
+
+        .label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        /* Skills Pill Style */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 5px 15px;
+            border: 1px solid var(--parchment);
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: var(--parchment);
+            color: var(--bg-black);
+        }
+
+        /* Projects/Writing Style */
+        .project-card {
+            margin-bottom: 30px;
+        }
+
+        .project-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--parchment);
+        }
+
+        .project-card p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            padding-top: 40px;
+            border-top: 1px solid rgba(244, 241, 234, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Shoeb Dindore</h1>
+            <p class="subtitle">Engineer & Literary Architect</p>
+        </header>
+
+        <section id="biography">
+            <h2>The Dossier</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Born</span>
+                    <p>January 4, 2006 (Age 20)</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Qualification</span>
+                    <p>10 + 2 (Engineering Focus)</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Passions</span>
+                    <p>Writing, Reading, Modeling</p>
+                </div>
+                <div class="info-item">
+                    <span class="label">Location</span>
+                    <p>India</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <h2>Tools of the Trade</h2>
+            <div class="skills-list">
+                <div class="skill">HTML/CSS</div>
+                <div class="skill">C</div>
+                <div class="skill">Python</div>
+                <div class="skill">UI/UX Design</div>
+                <div class="skill">Graphic Design</div>
+            </div>
+        </section>
+
+        <section id="narrative">
+            <h2>Current Works</h2>
+            <div class="project-card">
+                <h3>DocTrack</h3>
+                <p>A digital architecture designed for medical record management, streamlining patient history through organized data systems.</p>
+            </div>
+            <div class="project-card">
+                <h3>The Literary Lens</h3>
+                <p>Exploring the intersection of Noir aesthetics and 19th-century prose through poetry and digital storytelling.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 SHOEB DINDORE — BUILT WITH CODE AND INTENT.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
